@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset='utf-8' /> 
+    <title>Invoice Form</title> 
+    <style type="text/css">
+ body { 
+    font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; /* 960.gs */
+    background:#ffad60; 
+} 
+.col { 
+    width:50%; 
+    float:left; 
+} 
+fieldset { 
+    border:1px solid #474747; 
+    -moz-border-radius:5px; 
+    -webkit-border-radius:5px; 
+    margin-bottom:10px; 
+} 
+legend { 
+    background:#474747; 
+    color:#fff; 
+    padding:3px 15px; 
+    -moz-border-radius:5px; 
+    -webkit-border-radius:5px; 
+    font-weight:bold; 
+} 
+#wrap { 
+    width:820px; 
+    padding:20px; 
+    margin:20px auto; 
+    background:Hotpink; 
+    border:1px solid #ccc; 
+    -moz-border-radius:10px; 
+    -webkit-border-radius:10px; 
+} 
+p { 
+    padding:2px; 
+} 
+label { 
+    display:inline-block; 
+    width:100px; 
+    font-weight:bold; 
+} 
+label:after { 
+    content: ":"; 
+} 
+input { 
+    display:inline-block; 
+    width:200px; 
+    border:1px solid #ccc; 
+    padding:5px; 
+    margin:0; 
+    -moz-border-radius:5px; 
+    -webkit-border-radius:5px; 
+} 
+thead  td { 
+    text-align:center; 
+    font-weight:bold; 
+} 
+td + td > input { 
+    width:50px; 
+} 
+button { 
+    border:1px solid #474747; 
+    background:#ccc; 
+    -moz-border-radius:5px; 
+    -webkit-border-radius:5px; 
+    padding:10px; 
+    margin:10px; 
+    font-weight:bold; 
+    font-size:200%; 
+} 
+button:hover { 
+    background:#ececec; 
+    cursor:pointer; 
+}
+</style>
+<script type="text/javascript">
+function validateForm() {
+  var x = document.forms["m1"]["email"].value;
+  if (x == "vishu") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head> 
+<body> 
+<div id="wrap"><div> 
+    <h1>PLEASE ENTER THE CORRECT DETAILS <img src="/images/green5.jpg"></h1> 
+     
+ </div></div>
+<fieldset>
+
+    <legend>COMPANY Information</legend> 
+<form  name="m1" action="http://vmshanagal.000webhostapp.com/green.php"  method="POST" enctype="multipart/form-data">
+    <div class="col"> <p style="color:red">FIELDS MARKED WITH * are MANDATORY TO FILL</P>
+         <p> 
+            <label for="name">USERNAME *</label> 
+            <input type="text" name="user" required/> 
+        </p> 
+        <p> 
+            <label for="name">IT-COMPANY NAME *</label> 
+            <input type="text" name="name" required/> 
+        </p> 
+        <p> 
+            <label for="email">Email Address *</label> 
+            <input type="text" name="email" required/> 
+        </p> 
+<p> 
+            <label for="email">MOBILE NO *</label> 
+            <input type="text"  name="mob"  maxlength="10" required /> 
+        </p> 
+<p> 
+            <label for="email">ADDRESS *</label> 
+            <input type="text" name="address" required/> 
+        </p> 
+<p> 
+            <label for="email">STATE *</label> 
+            <input type="text" name="state" required/> 
+        </p> 
+<p> 
+            <label for="email">COMPANY-IMAGE *</label> 
+            <input type="file" name="image"/>
+        </p> 
+<h3>CHEMICALS USAGE IN ELECTRONIC EQUIPMENTS</h1>
+<p> 
+            <label for="postal_code">ARSENIC :K.G/month *</label> 
+            <input type="text" name="arsenic" required /> 
+        </p>
+<p> 
+            <label for="postal_code">LEAD K.G/month*</label> 
+            <input type="text" name="lead" required /> 
+        </p>
+<p> 
+            <label for="postal_code">CADMIUM K.G/month *</label> 
+            <input type="text" name="cad" required /> 
+        </p>
+<p> 
+            <label for="postal_code">MERCURY K.G/month*</label> 
+            <input type="text" name="mercury" required /> 
+        </p>
+    </div> 
+    <div class="col"> 
+        <p> 
+            <label for="address">CEO-NAME *</label> 
+            <input type="text" name="cname" required/> 
+        </p> 
+        <p> 
+            <label for="city">CEO-MOBILE-NO *</label> 
+            <input type="text" name="mob1" required/> 
+        </p> 
+        <p> 
+            <label for="province">CEO-ADDRESS *</label> 
+            <input type="text" name="cadd" required /> 
+        </p> 
+        <p> 
+            <label for="postal_code">CHEMICALS-USAGE DOCUMENT[jpg] *</label> 
+            <input type="file" name="img1"  required/> 
+        </p> 
+           <p> 
+            <label for="postal_code">COMANY-ID *</label> 
+            <input type="text" name="cid" required /> 
+        </p>
+
+
+ 
+ 
+ 
+ 
+ 
+
+    </div> 
+
+ 
+<input type="submit" name="submit" value="submit"/>
+<input type="reset" name="Reset" value="reset"/>
+    </form> 
+    </fieldset>  
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<html>
+<head>
+    <title>greenit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/2263CE48-F634-F64D-B5DB-F48EA44E740A/main.js" charset="UTF-8">
+</script>
+<script type="text/javascript">
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000);    
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+<style type="text/css">
+body,html{
+    margin:0;
+    padding:0;
+	  height:100%;
+  }
+  
+  .box{
+    height:100%;
+    width:100%;
+  }
+  
+  .gradDynamic{
+    position:relative;
+  }
+  
+  .gradDynamic:after, .gradDynamic:before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    content:"";
+    z-index:-1;
+  }
+  
+  .gradDynamic:after{
+    background:radial-gradient(circle,blue,transparent);
+    background-size:400%;
+    animation:colorSpin 5s linear infinite;
+  }
+  
+  .gradDynamic:before{
+    background-color:#ffad60;
+  }
+  
+  @keyframes colorSpin{
+    25%{background-position:0 100%}
+    50%{background-position:100% 100%}
+    75%{background-position:100% 0}
+    100%{filter:hue-rotate(360deg)}
+  }
+body {
+  background-color:Hotpink;
+  font-family: agencyfb;
+}
+.glow {
+  left:0px;
+top:1px;
+background-color:black;
+  font-size: 25px;
+  color: #00FF00;
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+p
+{
+background-color: #7FFFD4;
+}
+.d
+{
+	left:0px;
+	top:20px;
+}
+.d2
+{
+ background-color:#ffad60;
+font-family:times;
+font-size: 30px;
+  color: red;
+  position:absolute;
+top:100px;
+left:0px;
+}
+.d3
+{
+font-family:agencyfb;
+font-size: 20px;
+  color: white;
+left:0px;
+top:242px;
+position:absolute;
+height:560px;
+width:350px;
+    background-color:pink;
+border-radius: 25px;
+}
+.d4
+{
+font-family:times;
+font-size: 19px;
+  color: blue;
+position:relative;
+left:0px;
+top:0px;
+    height: 5px;;
+    width:1500px;;
+    background-color: #7FFFD4;
+border-radius: 25px;
+}
+.div2
+{
+position:absolute;
+ background-color:green;
+font-family:times;
+font-size: 25px;
+  color: white;
+left:0px;
+top:159px;
+    width: 100%;
+ border-radius: 25px;
+}
+.d1
+{
+ background-color:red;
+font-family:cursive;
+font-size: 10px;
+  color: white;
+left:0px;
+position:absolute;
+    width: 100%;
+}
+
+.p2
+{
+font-size: 25px;
+  color: red;
+  text-align: left;
+  position:relative;
+  top:14px;
+}
+footer
+{
+background-color:red;
+font-family:cursive;
+font-size: 25px;
+  color: white;
+}
+
+@-webkit-keyframes glow {
+  from {
+     text-shadow: 0 0 10px #fff, 0 0 20px green, 0 0 30px red, 0 0 40px orange, 0 0 50px pink, 0 0 60px white, 0 0 70px blue;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px green, 0 0 50px white, 0 0 60px red, 0 0 70px skyblue, 0 0 80px blue;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:blue;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color:;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color:white}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+ {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;
+}
+.container {
+     position:absolute;
+top:300px;
+left:500px;
+  background:#000;
+  width:500px;
+  margin: 0 auto;
+  padding: 10px 10px 0 10px;
+  
+  
+}
+
+.slideshow_wrapper {
+  width:500px;
+  height:280px;
+  overflow: hidden;
+   
+}
+
+.slideshow {
+  width:1500px;
+  height:280px;
+  margin: 0 0 0 -1000px;
+ position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration:10s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:alternate;
+   -webkit-animation-play-state: running;
+}
+
+.slide {
+  
+  width:500px;
+  height: 270px;
+  position:relative;
+  float:left;
+  overflow:hidden;
+  
+}
+
+.slideshow img{
+  width:500px; height:270px;
+}
+
+@-webkit-keyframes slide_animation {
+  
+  0% {left:0px;}
+  10% {left:500px;}
+  20% {left:500px;}
+  30% {left:500px;}
+  40% {left:500px;}
+  50% {left:500px;}
+  60% {left:500px;}
+  70% {left:1000px;}
+  80% {left:1000px;}
+  90% {left:1000px;}
+  100% {left:1000px;}
+  
+  
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+.d7
+{
+font-family:agencyfb;
+font-size: 20px;
+  color: red;
+left:1170px;
+top:160px;
+position:absolute;
+height:560px;
+width:5px;;
+}
+.blinking{
+    animation:blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: blue;    }
+    49%{    color: transparent; }
+    50%{    color: white; }
+    99%{    color:red;  }
+    100%{   color: green;    }
+}
+</style>
+</head>
+<body>
+    <div class="box gradDynamic">
+<div class="d">
+<img border="0" src="/images/green3.jpg" width="136px" height="136px" align="left"/>
+<img border="0" src="/images/green5.jpg" width="136px" height="136px" align="right"/> 
+<p class="glow" align="center"> <strong>G</strong>REEN IT <strong>M</strong>ANAGEMENT ONLINE WEB PORTAL <br>an orgnaization under GOVT </br><img border="0" src="/images/govt.jpg" width="36px" height="36px"/>
+<br>VIDYANAGARA-581402<br>
+???????? ?????? ??????? ????? ..???????? .
+????? ????? ,,?????????? ,???????? </p></div>
+<div class="div2">
+<ul>
+  <li><a href="http://vmshanagal.000webhostapp.com">&#127968;Home</a></li>
+  <li class="dropdown">
+     <a href="javascript:void(0)" class="dropbtn">| &#128104;Login</a>
+    <div class="dropdown-content">
+      <a href="https://vmshanagal.000webhostapp.com/login.php">company-login</a>
+      <a href="http://vmshanagal.000webhostapp.com/admin_login.php">admin-login</a>
+      <a href="#">Enquiry</a>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">|&#9742;Contact-us</a>
+    <div class="dropdown-content">
+      <a href="#"></a>
+<li class="dropdown">
+<a href="F:/web_project_programs/apply.html" class="dropbtn">| &#128104New-User</a>
+<div class="dropdown-content">
+<a href="https://vmshanagal.000webhostapp.com/register.php">Register</a>
+<li class="dropdown">
+<div class="dropdown-content">
+<li class="dropdown">
+<a href="http://vmshanagal.000webhostapp.com/verify.php" class="dropbtn">| Verification</a>
+<div class="dropdown-content">
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">|&#8681; Downloads</a>
+<div class="dropdown-content">
+      <a href="https://vmshanagal.000webhostapp.com/pdffiles/certificate.php">E-Certificate</a>
+    </div>
+  </li>
+</ul>
+ </div>
+<div class="d7">  
+<div class="topnav">
+<form action="http://localhost/me.php" method="POST">
+<input type="text" name="search" placeholder="Search..">
+<input type="submit" value="search">
+<span class="blinking">GREEN-IT GO GREEEN </span>
+</form>
+</div>
+</div>
+<div class="container">
+  <div class="slideshow_wrapper">
+    <div class="slideshow">
+      <div class="slide_one slide">
+        <img src="/images/green5.jpg" />
+      </div>
+      
+      <div class="slide_two slide">
+        <img src="/images/green3.jpg" />
+      </div>
+      
+       <div class="slide_three slide">
+        <img class="slide_img" src="/images/green1.jpg" />
+      </div>
+        <div class="slide_three slide">
+        <img class="slide_img" src="/images/green1.jpg" />
+      </div>
+    </div></div></div></div>
+    
+  <div class="d3"> 
+  
+
+  <p class="p2" >CIRCULARS<img src="/images/blink.gif" width="30" height="30"/></p>
+   
+     <marquee direction="up" style="scroll" scrollamount="3" onmouseover="stop();"  onmouseout="start();">
+  <a href="#" download>ISSUE OF GREEN IT </a><img src="/images/new.gif"></img></br></br>
+      <a href="#" download>IT COMPANIES HAVE TO ATTEND 2 DAYS WORKSHOP ON GREEN IT IMPLEMENTATION AT </br>BANGALORE BY INFOSYS</a><img src="/images/new.gif"/></br></br>
+      <a href="#">GREEN CERTIFICATE APPROVAL OF IT COMPANIES </a><img src="/images/new.gif"/> </br></br>
+    <a href="#">ISSUE OF GREEN IT </a><img src="/images/new.gif"></img></br></br>
+      <a href="#">IT COMPANIES HAVE TO ATTEND 2 DAYS WORKSHOP ON GREEN IT IMPLEMENTATION AT </br>BANGALORE BY INFOSYS</a><img src="/images/new.gif"/></br>
+      <a href="#">GREEN CERTIFICATE APPROVAL OF IT COMPANIES </a><img src="/images/new.gif"/> </br></br><a href="#">ISSUE OF GREEN IT </a><img src="/images/new.gif"></img></br></br>
+      
+    
+
+</marquee>
+<div class="d4">
+<p>
+site Designed and Hosted By :STUDENTS OF M.E.S R.N.SHETTY POLYTECHNIC ..SIRSI , UNDER THE GUIDANCE OF MR.GANAPATHI ACHARI(HOD) DEPT OF COMPUTER SCIENCE ENGG..   2018-19</p></div>
+</div>
+</body>
+</html>
+
+
+
